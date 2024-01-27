@@ -4,7 +4,7 @@
                         "FROM node:20.10.0",
                         "FROM library/python:3.11.7",
                         "WORKDIR /usr/src/app",
-                        "COPY requirements.txt /usr/src/app/",
+                        "COPY ./aritrans /usr/src/app/",
                         "RUN pip install -r requirements.txt",
                         "RUN streamlit run translate.py"
                     ]
