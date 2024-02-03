@@ -3,10 +3,11 @@
   "dockerfileLines": [
                         "FROM node:20.10.0",
                         "FROM library/python:3.11.7",
+                        "RUN mkdir -p /usr/src/app",
                         "WORKDIR /usr/src/app",
                         "COPY requirements.txt /usr/src/app/",
                         "COPY translate.py /usr/src/app/",
                         "RUN pip install -r requirements.txt",
-                        "RUN streamlit run translate.py"
+                        "CMD [ \"streamlit\", \"run\", \"translate.py\" ]"
                     ]
  }
